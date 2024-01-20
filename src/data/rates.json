@@ -1,0 +1,45 @@
+[{
+    "name": "Безлимитный 300",
+    "price": 300,
+    "period": "мес",
+    "currency": "руб",
+    "speed": 10,
+    "traffic": "Объем включенного трафика не ограничен",
+    "title_color": "blue",
+    "price_color": "light_blue",
+    "selected": false
+},
+{
+    "name": "Безлимитный 450",
+    "price": 450,
+    "period": "мес",
+    "currency": "руб",
+    "speed": 50,
+    "traffic": "Объем включенного трафика не ограничен",
+    "title_color": "green",
+    "price_color": "light_green",
+    "selected": false
+},
+{
+    "name": "Безлимитный 550",
+    "price": 550,
+    "period": "мес",
+    "currency": "руб",
+    "speed": 100,
+    "traffic": "Объем включенного трафика не ограничен",
+    "title_color": "red",
+    "price_color": "light_red",
+    "selected": true
+},
+{
+    "name": "Безлимитный 1000",
+    "price": 1000,
+    "period": "мес",
+    "currency": "руб",
+    "speed": 200,
+    "traffic": "Объем включенного трафика не ограничен",
+    "title_color": "black",
+    "price_color": "light_black",
+    "selected": false
+}
+]

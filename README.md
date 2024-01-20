@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# 23 неделя(react)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Вопросы 💎
 
-## Available Scripts
+1. Какую ошибку я допустила в [этом](https://www.notion.so/23-CSS-React-d4b0b61bb697459aacb1681ba2764440?pvs=21) примере?
 
-In the project directory, you can run:
+  Ответ: свойство ‘backgroundColor’ нужно писать либо в rgb/rgba формате, либо через #. И пробелы вокруг объекта стиля лишние.
 
-### `npm start`
+2. Какие есть способы работы со стилями в React?
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ответ: 1) добавление стилей инлайн через атрибут style;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2) Каскадные таблицы стилей, которые импортируются в компонент и добавляются через атрибут className;
 
-### `npm test`
+3) CSS модули, когда классы доступны только внутри компонента, в котором используются([name].module.css), т.е. модуль-файл - это скомпилированный файл, который передает нам модифицированный css с переименованными классами и формирующий этот css JS-объект;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+4) Импорт styled из ‘styled-components’;
 
-### `npm run build`
+5) Импорт JSS из ‘jss’;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+6) CSS препроцессоры со всеми встроенными конструкциями(переменными, миксинами, вложенностями, calc(), изменение родительского селектора за счет использования & и пр.);
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+7) Темизация, когда компонент принимает стиль как свойство. Таким образом можно динамически менять тему в зависимости от выбора пользователя;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+8) Импорт переменных из CSS файла. 
 
-### `npm run eject`
+3. Как будет выглядеть карточка товара, если ей передать атрибут `addedToCart`===0?
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ответ: Как не добавленная в корзину, т.е. по умолчанию, с кнопкой “добавить в корзину/заказать”.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Какие ещё проверки нужно было бы сделать для атрибута `addedToCart`?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Ответ: Что свойство addedToCart вообще существует.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Клиент попросил повесить тег «New» на товары из новой коллекции. Как это сделать, какой условный оператор выбрать?
 
-## Learn More
+Ответ: Выбрать условный оператор &&, если свойство New существует и true, тогда отрисовать тег, если нет, то ничего не делать.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+6. Какими тремя способами можно написать условный рендеринг? 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Ответ: 
 
-### Code Splitting
+- с помощью if  else условного оператора,
+- с помощью тернарного оператора “условие ? верно - делаем это : неверно - делаем это;”,
+- с помощью двойного амперсанда &&, у него нет понятия “если неверно”, он работает только с одним условием - верным, а обратное просто пропускает.
+7.  Представьте, что вы пишете компонент логина. Если пользователь авторизован, то мы показываем его имя, а если нет, то даём возможность ввода логина и пароля. Какой код для этого нужно написать, если за авторизацию пользователя отвечает флаг isAutorized?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Ответ: (isAutorized ? <div>{props.userName}</div> : <input type=”text” placrholder=”your name”/>);.
 
-### Analyzing the Bundle Size
+8. В чём преимущества использования препроцессоров? Какой ещё есть способ использовать переменные, кроме $ в препроцессорах?
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Ответ: Основные преимущества использования препроцессоров - это их возможности: переменные, миксины, вложенности, разбитие стилей на отдельные файлы(блоки), использование математических операций, быстрое изменение родительского селектора с помощью амперсанда(&).
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Можно импортировать файл стилей(@value background: ‘../variables.css’), содержащий переменные, и значения переменных в компонент через @value [varName], [varName], [varName], [varName] from background; и использовать эти переменные без знака $ в значении к свойству стиля.
