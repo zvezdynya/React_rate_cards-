@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/React_rate_cards-/static/css/main.966eed8e.css",
+    "main.js": "/React_rate_cards-/static/js/main.5d2c33f7.js",
+    "index.html": "/React_rate_cards-/index.html",
+    "main.966eed8e.css.map": "/React_rate_cards-/static/css/main.966eed8e.css.map",
+    "main.5d2c33f7.js.map": "/React_rate_cards-/static/js/main.5d2c33f7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.966eed8e.css",
+    "static/js/main.5d2c33f7.js"
+  ]
+}
