@@ -1,4 +1,5 @@
 [{
+    "id": 1,
     "name": "Безлимитный 300",
     "price": 300,
     "period": "мес",
@@ -10,6 +11,7 @@
     "selected": false
 },
 {
+    "id": 2,
     "name": "Безлимитный 450",
     "price": 450,
     "period": "мес",
@@ -21,6 +23,7 @@
     "selected": false
 },
 {
+    "id": 3,
     "name": "Безлимитный 550",
     "price": 550,
     "period": "мес",
@@ -32,6 +35,7 @@
     "selected": true
 },
 {
+    "id": 4,
     "name": "Безлимитный 1000",
     "price": 1000,
     "period": "мес",

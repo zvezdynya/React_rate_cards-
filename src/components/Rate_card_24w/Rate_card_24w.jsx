@@ -18,9 +18,9 @@ function Rate24() {
                 Week 24
             </div>
             <div className={styles.rates_container}>
-                {rates.map((rate, index) => (
-                    <div onClick={() => handleChange(index)} key={index} className={`${styles.rate} ${(index === selected ? `${styles.rate_selected}` : ``)}`}>
-                        <div className={`${styles.title} ${styles[rate.title_color]} ${styles.color_text} ${(index === selected ? `${styles.title_hov}` : ``)}`}>{rate.name}</div>
+                {rates.map((rate, index, id) => (
+                    <div onClick={() => handleChange(index)} key={id} className={`${styles.rate} ${(index === selected && `${styles.rate_selected}`)}`}>
+                        <div className={`${styles.title} ${styles[rate.title_color]} ${styles.color_text} ${(index === selected && `${styles.title_hov}`)}`}>{rate.name}</div>
                         <div className={`${styles.price_container} ${styles[rate.price_color]} ${styles.color_text}`}>
                             <span className={styles.currency}>{rate.currency}</span>
                             <span className={styles.price}>{rate.price}</span>
