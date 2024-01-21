@@ -1,0 +1,96 @@
+.rate {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    height: 100%;
+    align-items: center;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.rates_container {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.rate_selected {
+    box-shadow: 1px 4px 14px 13px rgba(34, 60, 80, 0.2);
+}
+
+.title, .price_container, .speed, .traffic {
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    padding: 25px 0;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.title_hov {
+    margin-top: -15px;
+    padding: 40px 0;
+}
+
+.price_container {
+    display: grid;
+    grid-template-columns: 35% 30% 35%;
+}
+
+.traffic span {
+    width: 70%;
+    text-align: center;
+}
+
+.currency {
+    align-self: start;
+    justify-self: end;
+}
+
+.period {
+    align-self: end;
+    justify-self: start;
+}
+
+.price {
+    font-size: 40px;
+}
+
+.color_text {
+    color: #fff;
+}
+
+.color_traffic {
+    background-color: rgba(155, 155, 155, 0.3);
+}
+
+.blue {
+    background-color: rgb(120,219,226);
+}
+
+.light_blue {
+    background-color: rgb(120,219,226, 0.7);
+}
+
+.green {
+    background-color: rgb(134, 233, 181);
+}
+
+.light_green {
+    background-color: rgb(134, 233, 181, 0.7);
+}
+
+.red {
+    background-color: rgb(234, 42, 74);
+}
+
+.light_red {
+    background-color: rgb(234, 42, 74, 0.7);
+}
+
+.black {
+    background-color: rgb(18, 18, 18);
+}
+
+.light_black {
+    background-color: rgb(18, 18, 18, 0.7);
+}
