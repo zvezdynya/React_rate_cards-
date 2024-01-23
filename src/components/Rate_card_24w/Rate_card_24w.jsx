@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import rates from '../../data/rates.json';
 import styles from './Rate_card_24w.module.scss';
 
 
 
-function Rate24() {
+function Rate24(props, index) {
     const [selected, setSelected] = useState(null);
 
     const handleChange = (index) => {
@@ -13,28 +12,24 @@ function Rate24() {
         );
     }
     return (
-        <React.Fragment>
-            <div>
-                Week 24
-            </div>
-            <div className={styles.rates_container}>
-                {rates.map((rate, index, id) => (
-                    <div onClick={() => handleChange(index)} key={id} className={`${styles.rate} ${(index === selected && `${styles.rate_selected}`)}`}>
-                        <div className={`${styles.title} ${styles[rate.title_color]} ${styles.color_text} ${(index === selected && `${styles.title_hov}`)}`}>{rate.name}</div>
-                        <div className={`${styles.price_container} ${styles[rate.price_color]} ${styles.color_text}`}>
-                            <span className={styles.currency}>{rate.currency}</span>
-                            <span className={styles.price}>{rate.price}</span>
-                            <span className={styles.period}>/{rate.period}</span>
-                        </div>
-                        <div className={styles.speed}>До {rate.speed} Мбит/сек</div>
-                        <div className={`${styles.traffic} ${styles.color_traffic}`}>
-                            <span>{rate.traffic}</span>
-                        </div>
-                    </div >
-                ))
-                }
-            </div>
-        </React.Fragment>
+        <React.Fragment {...props}>
+            <div onClick={() => handleChange(index)}
+                className={`${styles.rate} ${(index === selected && `${styles.rate_selected}`)}`
+                }>
+                <div className={`${styles.title} ${styles[props.title_color]} ${styles.color_text} ${(index === selected && `${styles.title_hov}`)}`}>
+                    {props.name}
+                </div>
+                <div className={`${styles.price_container} ${styles[props.price_color]} ${styles.color_text}`}>
+                    <span className={styles.currency}>{props.currency}</span>
+                    <span className={styles.price}>{props.price}</span>
+                    <span className={styles.period}>/{props.period}</span>
+                </div>
+                <div className={styles.speed}>До {props.speed} Мбит/сек</div>
+                <div className={`${styles.traffic} ${styles.color_traffic}`}>
+                    <span>{props.traffic}</span>
+                </div>
+            </div >
+        </React.Fragment >
 
     );
 }

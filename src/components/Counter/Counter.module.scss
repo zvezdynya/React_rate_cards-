@@ -1,0 +1,21 @@
+.btn_container {
+    display: flex;
+    justify-content: center;
+    height: 100px;
+}
+
+.btn {
+    margin: 0 auto;
+    width: 200px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: rgba(109, 80, 242, 0.782);
+    color: white;
+}
+
+.btn:active {
+    width: 170px;
+    height: 80px;
+    margin-top: 10px;
+    text-decoration: underline;
+}
